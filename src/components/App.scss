@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+.App{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.app-btn{
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #999;
+  background: #999;
+  border-radius: 5px;
+  color: #fff;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.85;
+
+  }
+}
+.card{
+   width: 100%;
+   margin: 10px auto;
+   border: 1px solid #999;
+   border-radius: 5px;
+   padding: 10px;
+   font-size: 15px;
+   &__item{
+     margin-bottom: 5px;
+     &--this{
+       width: 100%;
+     }
+     &:hover{
+       cursor: pointer;
+       opacity: 0.8;
+     }
+   }
+
+}
+
+.textarea{
+  width: 100px;
+  height: 50px;
+  border: 1px solid #999;
+}
+
+.popup{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  &__mask{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,.7);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+  }
+  &__content{
+    float: none;
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 102;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  &__text{
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+.button{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  &__close, &__use{
+    min-width: 100px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: #999;
+    color: #fff;
+    transition: all ease .3s;
+    &:hover{
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+}
